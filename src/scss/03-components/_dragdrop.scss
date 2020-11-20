@@ -1,0 +1,68 @@
+.drop {
+  height: 100vh;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+
+  &__container {
+    display: grid;
+    row-gap: 1rem;
+    padding: 2rem;
+    box-shadow: 4px 4px 4px #e1e1e1;
+    border-radius: 1rem;
+  }
+
+  &__card,
+  &__data {
+    display: flex;
+    align-items: center;
+  }
+
+  &__card {
+    cursor: grab;
+    width: 360px;
+    justify-content: space-between;
+    padding: 0.75rem 1.25rem 0.75rem 0.75rem;
+    background-color: $first-color-lighten;
+    box-shadow: 4px 4px 16px #e1e1e1, -2px -2px 16px #fff;
+    border-radius: 2.5rem;
+  }
+
+  &__img {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    margin-right: 1rem;
+  }
+
+  &__name {
+    font-size: $normal-font-size;
+    color: $first-color;
+    font-weight: 500;
+  }
+
+  &__profession {
+    font-size: $smaller-font-size;
+    color: $first-color-light;
+  }
+
+  &__social {
+    margin: 0 0.375em;
+    color: $first-color-light;
+    transition: color 0.4s;
+  }
+
+  &__social:hover {
+    color: $first-color;
+  }
+}
+
+/* Class name for the chosen item */
+.sortable-chosen {
+  box-shadow: 8px 8px 32px #e1e1e1;
+}
+
+/* Class name for the dragging item */
+.sortable-drag {
+  opacity: 0;
+}
